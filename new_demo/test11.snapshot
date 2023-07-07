@@ -163,6 +163,55 @@
           "style" : { },
           "type" : "org.apache.nifi.processors.cybersecurity.CompareFuzzyHash",
           "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "8e8b3eec-1f8f-31ed-853f-9dd72aaf18c6",
+          "identifier" : "8bf71f8c-07fe-3a10-be71-cc09b666dee0",
+          "instanceIdentifier" : "31fe4802-0189-1000-c24d-aecdcac9507f",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "CalculateRecordStats",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 457.0,
+            "y" : 52.00520324707031
+          },
+          "properties" : {
+            "record-stats-limit" : "10"
+          },
+          "propertyDescriptors" : {
+            "record-stats-limit" : {
+              "displayName" : "record-stats-limit",
+              "identifiesControllerService" : false,
+              "name" : "record-stats-limit",
+              "sensitive" : false
+            },
+            "record-stats-reader" : {
+              "displayName" : "Record Reader",
+              "identifiesControllerService" : true,
+              "name" : "record-stats-reader",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.CalculateRecordStats",
+          "yieldDuration" : "1 sec"
         } ],
         "remoteProcessGroups" : [ ],
         "variables" : { }
