@@ -1,7 +1,7 @@
 flows:
   12ab28c7-eaf5-462d-abe4-86c759837444: {ver: 2, file: test.snapshot, comments: test11,
     author: anonymous, created: 1688742090470, flowName: test, flowDesc: ''}
-  fec81088-019d-4a1c-9242-d5afad74c92d: {ver: 1, file: test11.snapshot, comments: '',
-    author: anonymous, created: 1688759313812, flowName: test11, flowDesc: ''}
+  fec81088-019d-4a1c-9242-d5afad74c92d: {ver: 2, file: test11.snapshot, comments: test2,
+    author: anonymous, created: 1688760668057, flowName: test11, flowDesc: ''}
 layoutVer: 1
 bucketId: bfef9982-795a-47bc-9df2-bc7bbdb4709c
