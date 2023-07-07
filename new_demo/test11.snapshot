@@ -91,6 +91,78 @@
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.CompressContent",
           "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-cybersecurity-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "8e8b3eec-1f8f-31ed-853f-9dd72aaf18c6",
+          "identifier" : "6e9207c0-cf3c-31f2-b49f-c89de5469242",
+          "instanceIdentifier" : "31fb6f72-0189-1000-6198-6581a5a0673b",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "CompareFuzzyHash",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 518.0,
+            "y" : 67.00520324707031
+          },
+          "properties" : {
+            "ATTRIBUTE_NAME" : "fuzzyhash.value",
+            "MATCHING_MODE" : "single"
+          },
+          "propertyDescriptors" : {
+            "ATTRIBUTE_NAME" : {
+              "displayName" : "Hash Attribute Name",
+              "identifiesControllerService" : false,
+              "name" : "ATTRIBUTE_NAME",
+              "sensitive" : false
+            },
+            "HASH_LIST_FILE" : {
+              "displayName" : "Hash List Source File",
+              "identifiesControllerService" : false,
+              "name" : "HASH_LIST_FILE",
+              "resourceDefinition" : {
+                "cardinality" : "SINGLE",
+                "resourceTypes" : [ "FILE" ]
+              },
+              "sensitive" : false
+            },
+            "HASH_ALGORITHM" : {
+              "displayName" : "Hashing Algorithm",
+              "identifiesControllerService" : false,
+              "name" : "HASH_ALGORITHM",
+              "sensitive" : false
+            },
+            "MATCH_THRESHOLD" : {
+              "displayName" : "Match Threshold",
+              "identifiesControllerService" : false,
+              "name" : "MATCH_THRESHOLD",
+              "sensitive" : false
+            },
+            "MATCHING_MODE" : {
+              "displayName" : "Matching Mode",
+              "identifiesControllerService" : false,
+              "name" : "MATCHING_MODE",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.cybersecurity.CompareFuzzyHash",
+          "yieldDuration" : "1 sec"
         } ],
         "remoteProcessGroups" : [ ],
         "variables" : { }
