@@ -212,6 +212,123 @@
           "style" : { },
           "type" : "org.apache.nifi.processors.standard.CalculateRecordStats",
           "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-email-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "8e8b3eec-1f8f-31ed-853f-9dd72aaf18c6",
+          "identifier" : "9aa00cfb-8fdd-31f3-805a-a76f49f7d748",
+          "instanceIdentifier" : "31fe93fb-0189-1000-617b-358ece7d8ba1",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "ConsumeEWS",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 672.0,
+            "y" : 110.00520324707031
+          },
+          "properties" : {
+            "ews-include-headers" : "",
+            "delete.messages" : "false",
+            "ews-autodiscover" : "true",
+            "ews-mark-as-read" : "true",
+            "folder" : "INBOX",
+            "connection.timeout" : "30 sec",
+            "ews-exclude-headers" : "",
+            "mail-ews-version" : "Exchange2010_SP2",
+            "fetch.size" : "10"
+          },
+          "propertyDescriptors" : {
+            "ews-include-headers" : {
+              "displayName" : "Original Headers to Include",
+              "identifiesControllerService" : false,
+              "name" : "ews-include-headers",
+              "sensitive" : false
+            },
+            "delete.messages" : {
+              "displayName" : "Delete Messages",
+              "identifiesControllerService" : false,
+              "name" : "delete.messages",
+              "sensitive" : false
+            },
+            "ews-autodiscover" : {
+              "displayName" : "Auto Discover URL",
+              "identifiesControllerService" : false,
+              "name" : "ews-autodiscover",
+              "sensitive" : false
+            },
+            "ews-mark-as-read" : {
+              "displayName" : "Mark Messages as Read",
+              "identifiesControllerService" : false,
+              "name" : "ews-mark-as-read",
+              "sensitive" : false
+            },
+            "password" : {
+              "displayName" : "Password",
+              "identifiesControllerService" : false,
+              "name" : "password",
+              "sensitive" : true
+            },
+            "folder" : {
+              "displayName" : "Folder",
+              "identifiesControllerService" : false,
+              "name" : "folder",
+              "sensitive" : false
+            },
+            "ews-url" : {
+              "displayName" : "EWS URL",
+              "identifiesControllerService" : false,
+              "name" : "ews-url",
+              "sensitive" : false
+            },
+            "connection.timeout" : {
+              "displayName" : "Connection timeout",
+              "identifiesControllerService" : false,
+              "name" : "connection.timeout",
+              "sensitive" : false
+            },
+            "ews-exclude-headers" : {
+              "displayName" : "Original Headers to Exclude",
+              "identifiesControllerService" : false,
+              "name" : "ews-exclude-headers",
+              "sensitive" : false
+            },
+            "mail-ews-version" : {
+              "displayName" : "Exchange Version",
+              "identifiesControllerService" : false,
+              "name" : "mail-ews-version",
+              "sensitive" : false
+            },
+            "user" : {
+              "displayName" : "User Name",
+              "identifiesControllerService" : false,
+              "name" : "user",
+              "sensitive" : false
+            },
+            "fetch.size" : {
+              "displayName" : "Fetch Size",
+              "identifiesControllerService" : false,
+              "name" : "fetch.size",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.email.ConsumeEWS",
+          "yieldDuration" : "1 sec"
         } ],
         "remoteProcessGroups" : [ ],
         "variables" : { }
