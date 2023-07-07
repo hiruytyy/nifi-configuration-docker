@@ -27,7 +27,143 @@
           "y" : 79.00521087646484
         },
         "processGroups" : [ ],
-        "processors" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "8e615308-c389-346a-886d-5fc41c31975b",
+          "identifier" : "6ada60e9-57da-31f7-8719-ebda511b8e4a",
+          "instanceIdentifier" : "30df2d7f-0189-1000-f2ab-0d42a13a12cc",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "CompressContent",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 592.0,
+            "y" : 24.0
+          },
+          "properties" : {
+            "Compression Format" : "use mime.type attribute",
+            "Mode" : "compress",
+            "Compression Level" : "1",
+            "Update Filename" : "false"
+          },
+          "propertyDescriptors" : {
+            "Compression Format" : {
+              "displayName" : "Compression Format",
+              "identifiesControllerService" : false,
+              "name" : "Compression Format",
+              "sensitive" : false
+            },
+            "Mode" : {
+              "displayName" : "Mode",
+              "identifiesControllerService" : false,
+              "name" : "Mode",
+              "sensitive" : false
+            },
+            "Compression Level" : {
+              "displayName" : "Compression Level",
+              "identifiesControllerService" : false,
+              "name" : "Compression Level",
+              "sensitive" : false
+            },
+            "Update Filename" : {
+              "displayName" : "Update Filename",
+              "identifiesControllerService" : false,
+              "name" : "Update Filename",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.CompressContent",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "backoffMechanism" : "PENALIZE_FLOWFILE",
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-cybersecurity-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.22.0"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "8e615308-c389-346a-886d-5fc41c31975b",
+          "identifier" : "7d2c283f-2073-3212-bcff-5a752265ff4f",
+          "instanceIdentifier" : "30df1e56-0189-1000-e2f6-d6e8cad37c52",
+          "maxBackoffPeriod" : "10 mins",
+          "name" : "CompareFuzzyHash",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 551.0000076293945,
+            "y" : 154.0052032470703
+          },
+          "properties" : {
+            "ATTRIBUTE_NAME" : "fuzzyhash.value",
+            "MATCHING_MODE" : "single"
+          },
+          "propertyDescriptors" : {
+            "ATTRIBUTE_NAME" : {
+              "displayName" : "Hash Attribute Name",
+              "identifiesControllerService" : false,
+              "name" : "ATTRIBUTE_NAME",
+              "sensitive" : false
+            },
+            "HASH_LIST_FILE" : {
+              "displayName" : "Hash List Source File",
+              "identifiesControllerService" : false,
+              "name" : "HASH_LIST_FILE",
+              "resourceDefinition" : {
+                "cardinality" : "SINGLE",
+                "resourceTypes" : [ "FILE" ]
+              },
+              "sensitive" : false
+            },
+            "HASH_ALGORITHM" : {
+              "displayName" : "Hashing Algorithm",
+              "identifiesControllerService" : false,
+              "name" : "HASH_ALGORITHM",
+              "sensitive" : false
+            },
+            "MATCH_THRESHOLD" : {
+              "displayName" : "Match Threshold",
+              "identifiesControllerService" : false,
+              "name" : "MATCH_THRESHOLD",
+              "sensitive" : false
+            },
+            "MATCHING_MODE" : {
+              "displayName" : "Matching Mode",
+              "identifiesControllerService" : false,
+              "name" : "MATCHING_MODE",
+              "sensitive" : false
+            }
+          },
+          "retriedRelationships" : [ ],
+          "retryCount" : 10,
+          "runDurationMillis" : 0,
+          "scheduledState" : "ENABLED",
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.cybersecurity.CompareFuzzyHash",
+          "yieldDuration" : "1 sec"
+        } ],
         "remoteProcessGroups" : [ ],
         "variables" : { }
       },
